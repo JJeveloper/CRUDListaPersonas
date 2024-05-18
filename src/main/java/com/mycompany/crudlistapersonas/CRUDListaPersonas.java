@@ -4,6 +4,8 @@
 
 package com.mycompany.crudlistapersonas;
 
+import com.mycompany.crudlistapersonas.view.Principal;
+
 /**
  *
  * @author JJAB
@@ -11,6 +13,8 @@ package com.mycompany.crudlistapersonas;
 public class CRUDListaPersonas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Principal principal = new Principal();
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
     }
 }
