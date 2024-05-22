@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.crudlistapersonas.model;
+package com.mycompany.crudlistapersonas.coneccion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  */
 public class Coneccion {
 
-    private static Connection con;
-    private static String url = "jdbc:mysql://localhost:3306/bodega";
-    private static String user = "root";
-    private static String password = "root";
+    private Connection con;
+    private String url = "jdbc:mysql://localhost:3306/mockdata";
+    private String user = "root";
+    private String password = "root";
 
-    public static Connection connect() {
+    public Connection conectar() {
         try {
 
             Class.forName("com.mysql.jdbc.Driver");
@@ -40,7 +40,7 @@ public class Coneccion {
         return con;
     }
 
-    public static void disconnect() {
+    public void disconnect() {
 
         try {
             con.close();
