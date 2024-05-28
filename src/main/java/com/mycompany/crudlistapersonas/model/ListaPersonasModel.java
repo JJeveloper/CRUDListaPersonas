@@ -29,7 +29,7 @@ public class ListaPersonasModel extends Coneccion {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                listaPersonas.add(new Personas(rs.getInt("id") , rs.getString("first_name"), rs.getString("last_name"), rs.getString("email"), rs.getString("gender"), rs.getString("phone")));
+                listaPersonas.add(new Personas(rs.getInt("id"), rs.getString("first_name"), rs.getString("last_name"), rs.getString("email"), rs.getString("gender"), rs.getString("phone")));
             }
 
         } catch (SQLException e) {
@@ -37,6 +37,26 @@ public class ListaPersonasModel extends Coneccion {
         }
 
         return listaPersonas;
+    }
+
+    public boolean guardarPersona(Personas p) {
+        String query = "INSERT INTO mock_data (first_name, last_name, email, gender, phone) VALUES (?,?,?,?,?)";
+        PreparedStatement ps;
+
+        try {
+            ps = conectar().prepareStatement(query);
+            ps.setString(1, p.getFirst_name());
+            ps.setString(2, p.getLast_name());
+            ps.setString(3, p.getEmail());
+            ps.setString(4, p.getGender());
+            ps.setString(5, p.getPhone());
+
+            ps.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
     }
 
 }

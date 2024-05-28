@@ -21,13 +21,13 @@ public class Coneccion {
     private String password = "root";
 
     public Connection conectar() {
-        try {
-
-            Class.forName("com.mysql.jdbc.Driver");
-
-        } catch (ClassNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Hay un problema con el Driver", "Error con el Driver", JOptionPane.ERROR_MESSAGE);
-        }
+//        try {
+//
+//            Class.forName("com.mysql.jdbc.Driver");
+//
+//        } catch (ClassNotFoundException e) {
+//            JOptionPane.showMessageDialog(null, "Hay un problema con el Driver", "Error con el Driver", JOptionPane.ERROR_MESSAGE);
+//        }
 
         try {
 

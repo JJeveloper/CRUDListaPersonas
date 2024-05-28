@@ -25,6 +25,16 @@ public class Personas {
         this.gender = gender;
         this.phone = phone;
     }
+
+    public Personas(String first_name, String last_name, String email, String gender, String phone) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.gender = gender;
+        this.phone = phone;
+    }
+    
+    
   
     public int getId() {
         return id;
