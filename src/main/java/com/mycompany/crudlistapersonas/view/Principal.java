@@ -6,6 +6,7 @@ package com.mycompany.crudlistapersonas.view;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -38,9 +39,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtApellido = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtApellido = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
@@ -49,7 +50,7 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPersonas = new javax.swing.JTable();
         btnGuardar = new javax.swing.JButton();
-        btnSeleccionar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
 
@@ -69,10 +70,10 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setText("Nombre");
 
         jLabel3.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jLabel3.setText("Apellido");
+        jLabel3.setText("Correo");
 
         jLabel4.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jLabel4.setText("Correo");
+        jLabel4.setText("Apellido");
 
         jLabel5.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabel5.setText("Genero");
@@ -100,11 +101,11 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(100, 100, 100)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3)
-                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(511, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -119,7 +120,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -127,7 +128,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -164,11 +165,11 @@ public class Principal extends javax.swing.JFrame {
         btnGuardar.setText("Guardar");
         btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        btnSeleccionar.setBackground(java.awt.Color.orange);
-        btnSeleccionar.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        btnSeleccionar.setForeground(new java.awt.Color(255, 255, 255));
-        btnSeleccionar.setText("Seleccionar");
-        btnSeleccionar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLimpiar.setBackground(java.awt.Color.orange);
+        btnLimpiar.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btnEditar.setBackground(new java.awt.Color(0, 0, 255));
         btnEditar.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
@@ -193,7 +194,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
-                        .addComponent(btnSeleccionar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
@@ -207,7 +208,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeleccionar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -262,12 +263,16 @@ public class Principal extends javax.swing.JFrame {
         return btnGuardar;
     }
 
-    public JButton getBtnSeleccionar() {
-        return btnSeleccionar;
+    public JButton getBtnLimpiar() {
+        return btnLimpiar;
     }
 
     public JComboBox<String> getCmbGenero() {
         return cmbGenero;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
     }
 
     public JTable getTblPersonas() {
@@ -293,14 +298,14 @@ public class Principal extends javax.swing.JFrame {
     public JTextField getTxtTelefono() {
         return txtTelefono;
     }
-    
+   
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnSeleccionar;
+    private javax.swing.JButton btnLimpiar;
     public javax.swing.JComboBox<String> cmbGenero;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -18,7 +18,7 @@ public class ListaPersonasModel extends Coneccion {
 
     public ArrayList tablaPersona() {
 
-        String query = "SELECT * FROM mock_data";
+        String query = "SELECT * FROM mock_data;";
         PreparedStatement ps;
         ResultSet rs;
 
@@ -40,7 +40,7 @@ public class ListaPersonasModel extends Coneccion {
     }
 
     public boolean guardarPersona(Personas p) {
-        String query = "INSERT INTO mock_data (first_name, last_name, email, gender, phone) VALUES (?,?,?,?,?)";
+        String query = "INSERT INTO mock_data (first_name, last_name, email, gender, phone) VALUES (?,?,?,?,?);";
         PreparedStatement ps;
 
         try {
@@ -52,6 +52,45 @@ public class ListaPersonasModel extends Coneccion {
             ps.setString(5, p.getPhone());
 
             ps.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
+    }
+
+    public boolean actualizarPersona(Personas p) {
+        String query = "UPDATE mock_data  SET first_name = ?, last_name = ?, email = ?, gender = ?, phone = ? WHERE id = ?;";
+        PreparedStatement ps;
+
+        try {
+            ps = conectar().prepareStatement(query);
+            ps.setString(1, p.getFirst_name());
+            ps.setString(2, p.getLast_name());
+            ps.setString(3, p.getEmail());
+            ps.setString(4, p.getGender());
+            ps.setString(5, p.getPhone());
+            ps.setInt(6, p.getId());
+
+            ps.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            System.out.println("ff " + e);
+            return false;
+        }
+
+    }
+
+    public boolean eliminarPersona(int id) {
+        String query = "DELETE FROM mock_data WHERE id = ?;";
+        PreparedStatement ps;
+
+        try {
+            ps = conectar().prepareStatement(query);
+            ps.setInt(1, id);
+            
+            ps.executeUpdate();
+
             return true;
         } catch (Exception e) {
             return false;
